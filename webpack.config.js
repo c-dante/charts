@@ -155,7 +155,7 @@ module.exports = ({
 				// js / babel
 				{
 					test: /\.m?js$/,
-					exclude: /(node_modules)/,
+					include: /(src|node_modules\/d3-array)/,
 					use: {
 						loader: 'babel-loader',
 						options: {
