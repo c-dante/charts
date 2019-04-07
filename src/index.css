@@ -1,16 +1,13 @@
-/*	 Import: https://github.com/postcss/postcss-import */
-@import "./import.css";
-
-/* Nesting: https://github.com/postcss/postcss-nested */
-.outer {
-	color: blue;
-
-	.inner {
-		color: red;
-	}
-
-	.sibling {
-		color: green;
-	}
+.abs-fill {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
+.chart {
+	width: 500px;
+	height: 300px;
+	background: red;
+}

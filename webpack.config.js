@@ -62,7 +62,7 @@ const buildPlugins = [
 
 	// Build the app
 	new HtmlWebpackPlugin({
-		title: 'Development Title',
+		title: 'Charts Example',
 		chunksSortMode: 'dependency',
 		excludeChunks: [],
 		meta: {
