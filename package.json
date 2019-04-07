@@ -1,7 +1,7 @@
 {
-  "name": "web",
+  "name": "charts",
   "version": "0.0.0",
-  "description": "Fresh start at a web base",
+  "description": "Some charts I guess",
   "main": "none",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,18 +10,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/c-dante/web.git"
+    "url": "git+https://github.com/c-dante/charts.git"
   },
   "author": "Dante <c.dante.federici@gmail.com> (http://dante.codes/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/c-dante/web/issues"
+    "url": "https://github.com/c-dante/charts/issues"
   },
-  "homepage": "https://github.com/c-dante/web#readme",
+  "homepage": "https://github.com/c-dante/charts#readme",
   "sideEffects": [
     "**/*.css"
   ],
   "dependencies": {
+    "d3-scale": "^3.0.0",
+    "d3-selection": "^1.4.0",
     "lodash": "^4.17.11"
   },
   "devDependencies": {
