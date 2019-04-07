@@ -3,7 +3,7 @@ import { extent } from 'd3-array';
 import { scaleLinear } from 'd3-scale';
 
 import rect from './marks/rect';
-import { buildSvgFrame } from './util';
+import { buildSvgFrame, MAX_WIDTH, MAX_HEIGHT } from './util';
 
 export default () => {
 
@@ -12,11 +12,11 @@ export default () => {
 		const sel = select(elt);
 
 		// Grab the bounds of the data
-		const [min, max] = extent(data, x => x.value);
+		const [min, max] = extent(data, x => x.value); // @todo: handle negative bars
 
 		// Build our screen scales
-		const xScale = scaleLinear([0, data.length], [0, elt.clientWidth]);
-		const yScale = scaleLinear([0, max], [0, elt.clientHeight]);
+		const xScale = scaleLinear([0, data.length], [0, MAX_WIDTH]);
+		const yScale = scaleLinear([0, max], [0, MAX_HEIGHT]);
 
 		const barWidth = xScale(1) - xScale(0);
 
@@ -27,7 +27,7 @@ export default () => {
 				// Map our bars to rectangles
 				return {
 					x: xScale(i),
-					y: elt.clientHeight - yScale(bar.value),
+					y: MAX_HEIGHT - yScale(bar.value),
 					width: barWidth,
 					height: yScale(bar.value),
 					// And bind the bar
